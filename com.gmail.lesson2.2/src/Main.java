@@ -17,7 +17,7 @@ public class Main {
 			numArray[i] = Integer.parseInt(substring[i]);
 		}
 
-		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < numArray.length; i++) {
 			sum = sum + numArray[i];
 		}
