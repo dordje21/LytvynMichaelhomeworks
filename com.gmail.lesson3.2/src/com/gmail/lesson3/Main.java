@@ -36,6 +36,8 @@ public class Main {
 		System.out.println("введите y");
 		int y = sc.nextInt();
 		
+		sc.close();
+		
 		//метод определения нахождения точки 
 		checkthepoint(x1, y1, x2, y2, x, y);
 	}
