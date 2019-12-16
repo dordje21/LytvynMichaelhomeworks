@@ -7,10 +7,10 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Pleas input first number:");
-		double a = sc.nextInt();
+		double a = sc.nextDouble();
 		System.out.println("Your input " + a + " as a first number");
 		System.out.println("Pleas input second number:");
-		double b = sc.nextInt();
+		double b = sc.nextDouble();
 		sc.close();
 		System.out.println("Your input " + a + " as a second number");
 		double sum = a + b;
