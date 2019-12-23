@@ -34,7 +34,7 @@ public class Main {
 				marks[i][lesson] = mark;
 				break;
 			}	
-		}System.out.println("добавили оценку " + mark + " " + name + " за занятие " + lesson);
+		}System.out.println("добавили оценку  " + mark + " " + name + " за занятие " + lesson);
 	}
 	
 	public static void printmark(int[][] marks, String[] students, String name, int lesson) {
