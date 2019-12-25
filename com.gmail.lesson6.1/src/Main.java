@@ -32,8 +32,8 @@ public class Main {
 
 		System.out.print("узнаем длину массива. ");
 		myArray.getSize(array);
-//
-//		myArray.clear(array);
+		
+		myArray.clear(array);
 	}
 
 }

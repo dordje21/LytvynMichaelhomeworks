@@ -30,8 +30,8 @@ public class myArray {
 	}
 
 	public static void clear(int[] array) {
-		for (int num : array) {
-			num = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = 0;
 		}
 		System.out.println("массив очищен " + Arrays.toString(array));
 	}
