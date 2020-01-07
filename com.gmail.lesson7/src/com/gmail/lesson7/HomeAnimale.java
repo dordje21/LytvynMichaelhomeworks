@@ -1,7 +1,7 @@
 package com.gmail.lesson7;
 
 public class HomeAnimale extends Animale {
-	public boolean isVaccinated;
+	private boolean isVaccinated;
 
 	public boolean isVaccinated() {
 		return isVaccinated;

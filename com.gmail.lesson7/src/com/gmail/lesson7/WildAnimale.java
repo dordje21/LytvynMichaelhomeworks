@@ -1,18 +1,18 @@
 package com.gmail.lesson7;
 
 public class WildAnimale extends Animale {
-	public boolean isPredator;
+	private boolean isPredator;
 
 	public WildAnimale(int id, double age, double weigh, String color, boolean isPredator) {
 		super(id, age, weigh, color);
 		this.isPredator = isPredator;
 	}
 
-	public boolean isPredator() {
+	protected boolean isPredator() {
 		return isPredator;
 	}
 
-	public void setPredator(boolean isPredator) {
+	protected void setPredator(boolean isPredator) {
 		this.isPredator = isPredator;
 	}
 	

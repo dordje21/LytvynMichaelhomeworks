@@ -2,7 +2,7 @@ package com.gmail.lesson7;
 
 public class Dog extends isTrained {
 
-	public String name;
+	private String name;
 
 	public Dog(int id, double age, double weigh, String color, boolean isVaccinated, boolean isTrained, String name) {
 		super(id, age, weigh, color, isVaccinated, isTrained);

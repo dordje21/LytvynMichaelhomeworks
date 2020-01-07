@@ -1,18 +1,18 @@
 package com.gmail.lesson7;
 
 public class Cat extends HomeAnimale{
-	public String name; 
+	private String name; 
 	
 	public Cat(int id, double age, double weigh, String color, boolean isVaccinated, String name) {
 		super(id, age, weigh, color, isVaccinated);
 		this.name = name;
 	}
 
-	public String getName() {
+	protected String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	protected void setName(String name) {
 		this.name = name;
 	}
 	
