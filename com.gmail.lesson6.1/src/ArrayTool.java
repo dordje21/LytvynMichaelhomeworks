@@ -1,6 +1,21 @@
 import java.util.Arrays;
 
-public class myArray {
+public class ArrayTool {
+	public int [] array;
+
+	public ArrayTool(int[] array) {
+		super();
+		this.array = array;
+	}
+
+	public int[] getArray() {
+		return array;
+	}
+
+	public void setArray(int[] array) {
+		this.array = array;
+	}
+
 	public static void add(int[] array, int arrIndex, int put) {
 		array[arrIndex] = put;
 	}
@@ -71,4 +86,12 @@ public class myArray {
 			}
 		}
 	}
+
+	@Override
+	public String toString() {
+		return "ArrayTool [" + (array != null ? "array=" + Arrays.toString(array) : "") + "]";
+	}
+	
+	
+
 }

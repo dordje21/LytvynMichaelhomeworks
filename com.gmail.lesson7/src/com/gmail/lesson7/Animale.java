@@ -1,10 +1,10 @@
 package com.gmail.lesson7;
 
 public class Animale {
-	public int id;
-	public double age;
-	public double weigh;
-	public String color;
+	private int id;
+	private double age;
+	private double weigh;
+	private String color;
 
 	public Animale(int id, double age, double weigh, String color) {
 		super();

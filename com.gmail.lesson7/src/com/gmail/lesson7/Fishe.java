@@ -17,7 +17,7 @@ public class Fishe extends HomeAnimale {
 	}
 
 	public String getVoice() {
-		return "Hello, my name is " + name + " .... ";
+		return "....";
 	}
 
 	@Override
