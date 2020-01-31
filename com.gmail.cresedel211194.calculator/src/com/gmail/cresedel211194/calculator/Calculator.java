@@ -25,11 +25,11 @@ public class Calculator {
 				answer = i * j;
 
 			} else if (h == '/') {
-					try {
-						answer = i / j;
-					} catch (Exception e) {
-						System.out.print("ошибка! нельзя делить на ");
-					}
+				try {
+					answer = i / j;
+				} catch (Exception e) {
+					System.out.print("ошибка! нельзя делить на ");
+				}
 			} else {
 				System.out.println("ошибка! не правельный знак");
 			}

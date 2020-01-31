@@ -1,6 +1,6 @@
 package com.gmail.cresedel211194.calculator;
 
-public class Takein{
+public class Takein {
 	private String num;
 	private int a;
 	private int b;
@@ -69,13 +69,13 @@ public class Takein{
 					chek = 1;
 				}
 			}
-			if(chek == 0) {
+			if (chek == 0) {
 				try {
 					String ss = s[1];
 					setD(ss.charAt(0));
 					setA(Integer.parseInt(s[0]));
 					setB(Integer.parseInt(s[2]));
-					if ( getA()<=10 && getB()<=10) {
+					if (getA() <= 10 && getB() <= 10) {
 						System.out.println(Calculator.calc(getA(), getB(), getD()));
 					} else {
 						System.out.println("ошибка! числа больше 10 не принимаются");
@@ -84,8 +84,6 @@ public class Takein{
 					System.out.println("ошибка! число больше 10 либо не верный формат");
 				}
 			}
-			
-			
 
 		} else {
 			System.out.println("Условие не правильное");
