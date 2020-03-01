@@ -57,13 +57,16 @@ public class Takein {
 							setB(RomanNumeral.romanToArabic(s[2]));
 							String ss = s[1];
 							setD(ss.charAt(0));
-							if (getA() <= 10 && getB() <= 10) {
+							if (getA() <= 10 & getB() <= 10) {
 								System.out.println(RomanNumeral.arabicToRoman(Calculator.calc(getA(), getB(), getD())));
 							} else {
 								System.out.println("ошибка! числа больше 10 не принимаются");
 								break;
 							}
 							chek = 2;
+						} else if(row2.isEmpty()){
+							System.out.println("ошибка! числа больше 10 не принимаются");
+							break;
 						}
 					}
 					chek = 1;
