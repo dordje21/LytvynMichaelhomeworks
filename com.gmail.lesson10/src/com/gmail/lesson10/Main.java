@@ -7,12 +7,19 @@ public class Main {
 	public static void main(String[] args) {
 		LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
 
+		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
+
 		myLinkedList.add(12);
 		myLinkedList.add(1);
 		myLinkedList.add(4);
 		myLinkedList.add(5);
 
+		System.out.println("Добавили обьекты");
+
+		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
+
 		LinkedList<Integer> arr = new LinkedList<Integer>();
+
 		arr.add(123);
 		arr.add(5);
 		arr.add(6);

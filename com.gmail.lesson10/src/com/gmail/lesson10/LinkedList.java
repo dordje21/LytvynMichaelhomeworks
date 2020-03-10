@@ -18,8 +18,12 @@ public class LinkedList implements Collection<Object> {
 
 	@Override
 	public boolean isEmpty() {
+		if (head.getNext() == null) {
+			return true;
+		} else {
+			return false;
+		}
 
-		return head.getNext() == null;
 	}
 
 	@Override
@@ -67,7 +71,7 @@ public class LinkedList implements Collection<Object> {
 			cacheSize = 1;
 			return true;
 		} else {
-			Node current = head; 
+			Node current = head;
 			while (current.getNext() != null) {
 				current = current.getNext();
 			}
@@ -99,7 +103,7 @@ public class LinkedList implements Collection<Object> {
 			prev = current;
 			current = current.getNext();
 			if (current.getObject().equals(o)) {
-				prev.setNext(current.getNext()); 
+				prev.setNext(current.getNext());
 				cacheSize--;
 				return true;
 			}
@@ -174,7 +178,7 @@ public class LinkedList implements Collection<Object> {
 	public String toString() {
 		String result = "[";
 
-		Node current = head; 
+		Node current = head;
 
 		while (current != null) {
 			result += current.getObject() + ", ";
