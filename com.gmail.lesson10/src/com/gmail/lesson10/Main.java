@@ -7,9 +7,14 @@ public class Main {
 	public static void main(String[] args) {
 		LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
 
+		System.out.println("НЕ Добавляли обьекты");
 		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
 
 		myLinkedList.add(12);
+		
+		System.out.println("Добавили 1 обьект");
+		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
+		
 		myLinkedList.add(1);
 		myLinkedList.add(4);
 		myLinkedList.add(5);
