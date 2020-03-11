@@ -4,28 +4,37 @@ import java.util.Iterator;
 
 public class MyIterator implements Iterator<Object> {
 
-	private Node current;
+	public MyIterator iterator() {
+		return new MyIterator() {
+			private Node first;
+			private Node current = first;
 
-	public MyIterator(Node head) {
-		current = head;
+			@Override
+			public boolean hasNext() {
+				return current.hasNext();
+			}
+
+			@Override
+			public Object next() throws IndexOutOfBoundsException {
+				Object result = current;
+				if (!current.hasNext())
+					throw new IndexOutOfBoundsException("End of list.");
+				current = current.getNext();
+				return result;
+			}
+		};
 	}
 
 	@Override
 	public boolean hasNext() {
-
-		return current != null;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
 	public Object next() {
-		Object result = current.getObject();
-
-		if (current.getNext() != null) {
-			current = current.getNext();
-		} else {
-			throw new IndexOutOfBoundsException();
-		}
-
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 }

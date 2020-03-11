@@ -2,7 +2,6 @@ package com.gmail.lesson11;
 
 import java.util.*;
 
-
 public class ArrayList<T> implements List<T> {
 
 	private Object[] objects = new Object[0];
@@ -51,6 +50,7 @@ public class ArrayList<T> implements List<T> {
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public boolean remove(Object o) {
 
@@ -70,6 +70,7 @@ public class ArrayList<T> implements List<T> {
 		objects = new Object[0];
 	}
 
+	@SuppressWarnings("unchecked")
 	T myElement(int index) {
 		return (T) objects[index];
 	}
@@ -93,11 +94,13 @@ public class ArrayList<T> implements List<T> {
 			throw new IndexOutOfBoundsException("");
 		}
 
+		@SuppressWarnings("unused")
 		T getObj = myElement(index);
 
 		return getObj = (T) element;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void add(int index, T element) {
 		int size = size();
@@ -122,6 +125,7 @@ public class ArrayList<T> implements List<T> {
 
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public T remove(int index) {
 
@@ -171,7 +175,7 @@ public class ArrayList<T> implements List<T> {
 		return null;
 	}
 
-	public boolean retainAll(ArrayList arr) {
+	public boolean retainAll(ArrayList<?> arr) {
 
 		for (Object o : objects) {
 			if (!arr.contains(o)) {
@@ -181,7 +185,7 @@ public class ArrayList<T> implements List<T> {
 		return true;
 	}
 
-	public boolean containsAll(ArrayList arr) {
+	public boolean containsAll(@SuppressWarnings("rawtypes") ArrayList arr) {
 		for (Object o : arr) {
 			if (!contains(o)) {
 				return false;
@@ -190,6 +194,7 @@ public class ArrayList<T> implements List<T> {
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Object[] toArray(Object[] o) {
 		return new Object[0];

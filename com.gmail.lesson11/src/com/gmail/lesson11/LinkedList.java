@@ -2,7 +2,7 @@ package com.gmail.lesson11;
 
 import java.util.*;
 
-public class LinkedList implements List {
+public class LinkedList implements List<Object> {
 
 	private Node head;
 
@@ -38,9 +38,27 @@ public class LinkedList implements List {
 		return false;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public Iterator iterator() {
-		return iterator();
+		return new Iterator() {
+			private Node first;
+			private Node current = first;
+
+			@Override
+			public boolean hasNext() {
+				return current.hasNext();
+			}
+
+			@Override
+			public Object next() throws IndexOutOfBoundsException {
+				Object result = current;
+				if (!current.hasNext())
+					throw new IndexOutOfBoundsException("End of list.");
+				current = current.getNext();
+				return result;
+			}
+		};
 	}
 
 	@Override
@@ -107,7 +125,7 @@ public class LinkedList implements List {
 	}
 
 	@Override
-	public boolean addAll(Collection c) {
+	public boolean addAll(Collection<?> c) {
 
 		Object[] cc = c.toArray();
 
@@ -119,7 +137,7 @@ public class LinkedList implements List {
 	}
 
 	@Override
-	public boolean addAll(int index, Collection c) {
+	public boolean addAll(int index, Collection<?> c) {
 		return false;
 	}
 
@@ -187,23 +205,22 @@ public class LinkedList implements List {
 	}
 
 	@Override
-	public ListIterator listIterator() {
+	public ListIterator<Object> listIterator() {
 		return null;
 	}
 
 	@Override
-	public ListIterator listIterator(int index) {
+	public ListIterator<Object> listIterator(int index) {
 		return null;
 	}
 
 	@Override
-	public List subList(int fromIndex, int toIndex) {
+	public List<Object> subList(int fromIndex, int toIndex) {
 		return null;
 	}
 
 	@Override
-	public boolean retainAll(Collection c) {
-		Object[] cc = c.toArray();
+	public boolean retainAll(Collection<?> c) {
 		Object[] myArr = toArray();
 
 		for (int i = 0; i < cache; i++) {
@@ -216,18 +233,18 @@ public class LinkedList implements List {
 	}
 
 	@Override
-	public boolean removeAll(Collection c) {
-		Object[] cc = c.toArray();
+	public boolean removeAll(Collection<?> c) {
+		Object[] arr = c.toArray();
 
-		for (int i = 0; i < cc.length; i++) {
-			remove(cc[i]);
+		for (int i = 0; i < arr.length; i++) {
+			remove(arr[i]);
 		}
 
 		return true;
 	}
 
 	@Override
-	public boolean containsAll(Collection c) {
+	public boolean containsAll(Collection<?> c) {
 
 		Object[] arr = c.toArray();
 
@@ -240,6 +257,7 @@ public class LinkedList implements List {
 		return true;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Object[] toArray(Object[] a) {
 		return new Object[0];

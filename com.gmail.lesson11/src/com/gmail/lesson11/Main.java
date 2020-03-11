@@ -2,7 +2,7 @@ package com.gmail.lesson11;
 
 public class Main {
 	public static void main(String[] args) {
-		
+
 		ArrayList<Integer> box = new ArrayList<Integer>();
 
 		ArrayList<Integer> box2 = new ArrayList<Integer>();
@@ -21,10 +21,10 @@ public class Main {
 		box2.add(3);
 		box2.add(11);
 		box2.add(12);
-		
+
 		System.out.println("box2 size: " + box2.size());
 		print(box2);
-		
+
 		System.out.println("box1 remove element 4 ");
 		box.remove(4);
 		print(box);
@@ -51,6 +51,7 @@ public class Main {
 
 		box.add(15);
 		print(box);
+		print(box2);
 
 		box.clear();
 		print(box);
