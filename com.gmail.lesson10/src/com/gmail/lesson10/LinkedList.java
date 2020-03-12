@@ -7,7 +7,6 @@ import java.util.Iterator;
 public class LinkedList implements Collection<Object> {
 
 	private Node head;
-
 	private int cacheSize;
 
 	@Override
