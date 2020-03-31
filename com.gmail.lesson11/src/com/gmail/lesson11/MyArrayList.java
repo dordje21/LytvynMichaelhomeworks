@@ -2,7 +2,7 @@ package com.gmail.lesson11;
 
 import java.util.*;
 
-public class ArrayList<T> implements List<T> {
+public class MyArrayList<T> implements List<T> {
 
 	private Object[] objects = new Object[0];
 

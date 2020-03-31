@@ -1,5 +1,7 @@
 package com.gmail.lesson11;
 
+import java.util.ArrayList;
+
 public class Main {
 	public static void main(String[] args) {
 
@@ -13,6 +15,13 @@ public class Main {
 		box.add(5);
 		box.add(4);
 		box.add(3);
+
+		System.out.println("box hasNext? =  " + box.iterator().hasNext());
+		System.out.println("box next? =  " + box.iterator().next());
+		
+		 while(box.iterator().hasNext()){
+	            System.out.println(box.iterator().next());
+	        }
 
 		System.out.println("box1 size: " + box.size());
 		print(box);

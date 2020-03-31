@@ -1,11 +1,9 @@
 package com.gmail.lesson10;
 
-import java.util.LinkedList;
-
 public class Main {
 
 	public static void main(String[] args) {
-		LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
+		MyLinkedList myLinkedList = new MyLinkedList();
 
 		System.out.println("НЕ Добавляли обьекты");
 		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
@@ -21,9 +19,9 @@ public class Main {
 
 		System.out.println("Добавили обьекты");
 
-		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
+//		System.out.println("myLinkedList isEmpty = " + myLinkedList.isEmpty());
 
-		LinkedList<Integer> arr = new LinkedList<Integer>();
+		MyLinkedList arr = new MyLinkedList();
 
 		arr.add(123);
 		arr.add(5);

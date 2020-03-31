@@ -10,7 +10,7 @@ public class MyIterator implements Iterator<Object> {
 			private Node current = first;
 
 			@Override
-			public boolean hasNext() {
+			public boolean hasNext() throws NullPointerException{
 				return current.hasNext();
 			}
 

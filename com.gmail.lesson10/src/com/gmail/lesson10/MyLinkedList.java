@@ -4,7 +4,9 @@ import java.util.Collection;
 import java.util.EmptyStackException;
 import java.util.Iterator;
 
-public class LinkedList implements Collection<Object> {
+import org.eclipse.jdt.annotation.NonNull;
+
+public class MyLinkedList implements Collection<Object> {
 
 	private Node head;
 	private int cacheSize;
@@ -15,14 +17,19 @@ public class LinkedList implements Collection<Object> {
 		return cacheSize;
 	}
 
+	@NonNull
 	@Override
 	public boolean isEmpty() {
-		if (head.getNext() == null) {
-			return true;
-		} else {
-			return false;
-		}
-
+		return head.getObject() == null;
+	}
+	
+	public boolean isEmpty(MyLinkedList myLinkedList) {
+		 Iterator<Object> iter = myLinkedList.iterator();
+	       if (iter.hasNext()){
+	    	   	return false;
+	        } else {
+				return true;
+	        }
 	}
 
 	@Override
@@ -58,7 +65,6 @@ public class LinkedList implements Collection<Object> {
 			result[i++] = node.getObject();
 		}
 		return result;
-
 	}
 
 	@Override
