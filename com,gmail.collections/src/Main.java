@@ -60,6 +60,18 @@ public class Main {
 		ts.add(5);
 		
 		System.out.println(ts);
+		
+		TreeSet<UsbDriver> tstwo = new TreeSet<UsbDriver>(new UsbComparator());
+		
+		tstwo.add(new UsbDriver(8, "Kingston"));
+		tstwo.add(new UsbDriver(16, "Apach"));
+		tstwo.add(new UsbDriver(4, "Transend"));
+		
+		Iterator<UsbDriver> itertwo = tstwo.iterator();
+		
+		for(;itertwo.hasNext();) {
+			System.out.println(itertwo.next());
+		}
 	}
 
 }
