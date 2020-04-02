@@ -1,6 +1,8 @@
 package com.gmail.file;
 
+import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class Main {
@@ -16,6 +18,15 @@ public class Main {
 		
 		File folder = new File("/Users/Michael/Desktop/");
 		System.out.println(FileOperator.calculateFolderSize(folder));
+		
+		
+		try(DataOutputStream f = new DataOutputStream(new FileOutputStream("b.dat"))){
+			f.writeInt(12);
+		} catch (Exception e) {
+			System.out.println("file write error");
+		}
 	}
+	
+	
 
 }
